@@ -4,4 +4,12 @@ class BankAccount
     @balance = 1000
     @status = 'open'
   end
+
+  def deposit(money)
+    @balance += money
+  end
+
+  def valid?
+    @status == 'open' && @balance > 0
+  end
 end
