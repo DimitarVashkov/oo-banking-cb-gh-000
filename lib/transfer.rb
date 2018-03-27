@@ -6,10 +6,12 @@ class Transfer
     @receiver = receiver
     @amount = amount
     @status = 'pending'
+    @transactions = []
   end
 
   def valid?
     @sender.valid? && @receiver.valid?
   end
+
 
 end
