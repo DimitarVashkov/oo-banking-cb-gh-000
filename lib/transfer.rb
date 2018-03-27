@@ -6,7 +6,6 @@ class Transfer
     @receiver = receiver
     @amount = amount
     @status = 'pending'
-    @transactions = []
   end
 
   def valid?
@@ -30,5 +29,4 @@ class Transfer
       @receiver.balance -= @amount
       @status = 'reversed'
     end
-
 end
